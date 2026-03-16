@@ -1,34 +1,36 @@
-<!--?php/** * Brand constants */define('BRAND_NAME', 'AutoDrošs');define('PRIMARY_DOMAIN', 'autodross.lv');define('SUPPORT_EMAIL', 'info@domain.com');define('CURRENT_YEAR', date('Y'));$page_title       = 'AutoDrošs — Automašīnas Apdrošināšana Latvijā';$page_description = 'AutoDrošs piedāvā uzticamu un izdevīgu automašīnas apdrošināšanu Latvijā. Iegūstiet bezmaksas piedāvājumu jau šodien.';$page_keywords    = 'automašīnas apdrošināšana, KASKO, OCTA, auto apdrošināšana Latvija, autodross';$canonical_url    = 'https://domain.com/';?-->
+<!--?php/** * Brand constants */define('BRAND_NAME', 'AutoDrošs');define('PRIMARY_DOMAIN', 'autodross.lv');define('SUPPORT_EMAIL', 'team@domain.com');define('CURRENT_YEAR', date('Y'));$page_title       = 'AutoDrošs — Automašīnas Apdrošināšana Latvijā';$page_description = 'AutoDrošs piedāvā uzticamu un izdevīgu automašīnas apdrošināšanu Latvijā. Iegūstiet bezmaksas piedāvājumu jau šodien.';$page_keywords    = 'automašīnas apdrošināšana, KASKO, OCTA, auto apdrošināšana Latvija, autodross';$canonical_url    = 'https://domain.com/';?-->
 <html lang="lv">
  <head>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header role="banner">
-   <nav class="navbar" navbar-expand-md sticky-top bg-white border-bottom\_ aria-label="Galvenā" navigācija\_>
-    <div class="container">
-     <a class="navbar-brand" href="/" aria-label="&lt;?php" echo brand_name; ?> — sākumlapa\"&gt; <span class="brand-logo-mark" aria-hidden="true"> 
-       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0" 0 32 32\_ width="32" height="32" focusable="false">
-        <circle cx="16" cy="16" r="15" fill="#2d3748" /> <path d="M8" 20l4-8h8l4 8H8z\_ fill="#f9a8d4" /> <circle cx="11" cy="21" r="2" fill="#fff" /> <circle cx="21" cy="21" r="2" fill="#fff" />
-       </svg> 
-      </span> <span class="brand-name" ms-2\_><!--?php echo BRAND_NAME; ?--></span> </a>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavCollapse" aria-controls="mainNavCollapse" aria-expanded="false" aria-label="Pārslēgt" navigāciju\_><span class="navbar-toggler-icon"></span> <a class="btn" btn-cta d-none d-md-inline-flex ms-auto me-3 order-md-last\_ href="#quote-form"> Saņemt piedāvājumu </a>
-      <div class="collapse" navbar-collapse\_ id="mainNavCollapse">
-       <ul class="navbar-nav" me-auto mb-2 mb-md-0\_>
-        <li class="nav-item"><a class="nav-link" href="#about" aria-current="false">Par mums</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Pakalpojumi</a></li>
-        <li class="nav-item"><a class="nav-link" href="#team">Komanda</a></li>
-        <li class="nav-item"><a class="nav-link" href="#reviews">Atsauksmes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#media">Mediji</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Kontakti</a></li>
-       </ul>
-       <a class="btn" btn-cta d-md-none mt-2\_ href="#quote-form">Saņemt piedāvājumu</a>
-      </div></button>
-    </div>
-   </nav>
-  </header>
+<header class="dr-header" data-dr-variant="v1">
+  <div class="dr-header-inner">
+    <a class="dr-logo" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.php">Home</a></li>
+      </ul>
+    </nav>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.php">Home</a></li>
+  </ul>
+</nav>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width," initial-scale="1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,8 +60,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">    {        \"@context\": \"https://schema.org\",        \"@type\": \"Organization\",        \"name\": \"<?php echo BRAND_NAME; ?>\",        \"url\": \"<?php echo $canonical_url; ?>\",        \"logo\": \"https://domain.com/assets/img/logo.png\",        \"email\": \"<?php echo SUPPORT_EMAIL; ?>\",        \"telephone\": \"{telephone}\",        \"address\": {            \"@type\": \"PostalAddress\",            \"streetAddress\": \"{address}\",            \"addressCountry\": \"LV\"        },        \"sameAs\": []    }    </script>
-  <script type="application/ld+json">    {        \"@context\": \"https://schema.org\",        \"@type\": \"WebSite\",        \"name\": \"<?php echo BRAND_NAME; ?>\",        \"url\": \"<?php echo $canonical_url; ?>\",        \"potentialAction\": {            \"@type\": \"SearchAction\",            \"target\": \"https://domain.com/?s={search_term_string}\",            \"query-input\": \"required name=search_term_string\"        }    }    </script>
+  
+  
   <!-- ===================== HEADER ===================== -->
   <header role="banner">
    <nav class="navbar" navbar-expand-md sticky-top bg-white border-bottom\_ aria-label="Galvenā" navigācija\_>
@@ -406,7 +408,7 @@
                    </svg>
                   </div>
                   <h3 class="contact-title">Tālrunis</h3>
-                  <a href="tel:{telephone}" class="contact-link">{telephone}</a>
+                  <a href="tel:+371 6 2275826" class="contact-link">+371 6 2275826</a>
                  </div>
                 </div>
                 <div class="col-12" col-md-4\_ data-aos="fade-up" data-aos-delay="80">
@@ -428,7 +430,7 @@
                    </svg>
                   </div>
                   <h3 class="contact-title">Adrese</h3>
-                  <address class="contact-address">{address}</address>
+                  <address class="contact-address">Z-Towers, Ķīpsalas iela 8, Floor 10, Office 406, LV-1048 Rīga</address>
                  </div>
                 </div>
                </div>
@@ -447,62 +449,42 @@
   </main>
   <!-- ===================== /MAIN ===================== -->
   <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer" role="contentinfo">
-   <div class="container">
-    <div class="row" gy-4 py-5\_>
-     <div class="col-12" col-md-4\_>
-      <a href="/" class="footer-brand" aria-label="&lt;?php" echo brand_name; ?> — sākumlapa\"&gt; 
-       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0" 0 32 32\_ width="32" height="32" focusable="false" aria-hidden="true">
-        <circle cx="16" cy="16" r="15" fill="#f9a8d4" /> <path d="M8" 20l4-8h8l4 8H8z\_ fill="#2d3748" /> <circle cx="11" cy="21" r="2" fill="#fff" /> <circle cx="21" cy="21" r="2" fill="#fff" />
-       </svg> 
-       <span class="footer-brand-name" ms-2\_><!--?php echo BRAND_NAME; ?--></span> </a>
-      <p class="footer-tagline" mt-3\_>Uzticama automašīnas apdrošināšana Latvijā ar caurskatāmiem nosacījumiem un personalizētu pieeju.</p>
-      <p class="footer-contact" mt-3\_><a href="tel:{telephone}" class="footer-link">{telephone}</a>
-       <br>
-       <a href="mailto:&lt;?php" echo support_email; ?>\" class=\"footer-link\"&gt;<!--?php echo SUPPORT_EMAIL; ?--></a></p>
-      <address class="footer-address" mt-2\_>{address}</address>
-     </div>
-     <div class="col-6" col-md-2\_>
-      <h3 class="footer-heading">Pakalpojumi</h3>
-      <ul class="footer-list" role="list">
-       <li><a href="#services" class="footer-link">OCTA</a></li>
-       <li><a href="#services" class="footer-link">KASKO</a></li>
-       <li><a href="#services" class="footer-link">Ceļojumu apdrošināšana</a></li>
-       <li><a href="#services" class="footer-link">Avārijas asistents</a></li>
-      </ul>
-     </div>
-     <div class="col-6" col-md-2\_>
-      <h3 class="footer-heading">Uzņēmums</h3>
-      <ul class="footer-list" role="list">
-       <li><a href="#about" class="footer-link">Par mums</a></li>
-       <li><a href="#team" class="footer-link">Komanda</a></li>
-       <li><a href="#media" class="footer-link">Mediji</a></li>
-       <li><a href="#reviews" class="footer-link">Atsauksmes</a></li>
-      </ul>
-     </div>
-     <div class="col-6" col-md-2\_>
-      <h3 class="footer-heading">Palīdzība</h3>
-      <ul class="footer-list" role="list">
-       <li><a href="#help-center" class="footer-link">Palīdzības centrs</a></li>
-       <li><a href="#contact" class="footer-link">Kontakti</a></li>
-       <li><a href="#quote-form" class="footer-link">Aprēķināt cenu</a></li>
-      </ul>
-     </div>
-     <div class="col-6" col-md-2\_>
-      <h3 class="footer-heading">Juridiskais</h3>
-      <ul class="footer-list" role="list">
-       <li><a href="#contact" class="footer-link">Privātuma politika</a></li>
-       <li><a href="#contact" class="footer-link">Lietošanas noteikumi</a></li>
-       <li><a href="#contact" class="footer-link">Sīkdatņu politika</a></li>
-      </ul>
-     </div>
+  <footer class="dr-footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-top">
+      <div class="dr-footer-brand">
+        <a href="./index.php" class="dr-footer-logo" aria-label="domain — sākumlapa">
+          <span class="dr-footer-logo-text">domain</span>
+        </a>
+        <p class="dr-footer-disclaimer">Šī vietne ir paredzēta vispārīgai informācijai par domain. Visi materiāli tiek piedāvāti bez garantijām, un domain.com saturam var tikt veiktas izmaiņas bez iepriekšēja brīdinājuma.</p>
+      </div>
+      <div class="dr-footer-grid">
+        <nav class="dr-footer-section" aria-label="Galvenā navigācija">
+          <h2 class="dr-footer-heading">Navigācija</h2>
+          <ul class="dr-footer-nav">
+            <li class="dr-footer-nav-item"><a href="./index.php" class="dr-footer-link">Home</a></li>
+          </ul>
+        </nav>
+        <nav class="dr-footer-section" aria-label="Juridiskā informācija">
+          <h2 class="dr-footer-heading">Juridiskā informācija</h2>
+          <ul class="dr-footer-legal">
+          </ul>
+        </nav>
+        <section class="dr-footer-section" aria-label="Kontakti">
+          <h2 class="dr-footer-heading">Kontakti</h2>
+          <div class="dr-footer-contact">
+            <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">Adrese:</span> <span class="dr-footer-contact-value">Z-Towers, Ķīpsalas iela 8, Floor 10, Office 406, LV-1048 Rīga</span></p>
+            <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">Tālrunis:</span> <a href="tel:+371 6 2275826" class="dr-footer-link">+371 6 2275826</a></p>
+            <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">E-pasts:</span> <a href="mailto:team@domain.com" class="dr-footer-link">team@domain.com</a></p>
+          </div>
+        </section>
+      </div>
     </div>
-    <div class="footer-bottom">
-     <p class="footer-copy">© <!--?php echo CURRENT_YEAR; ?--> <!--?php echo BRAND_NAME; ?-->. Visas tiesības aizsargātas.</p>
-     <p class="footer-domain"><a href="https://domain.com" class="footer-link"><!--?php echo PRIMARY_DOMAIN; ?--></a></p>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
     </div>
-   </div>
-  </footer>
+  </div>
+</footer>
   <!-- ===================== /FOOTER ===================== -->
   " 
   <footer class="site-footer" role="contentinfo">
@@ -515,10 +497,10 @@
        </svg> 
        <span class="footer-brand-name" ms-2\_><!--?php echo BRAND_NAME; ?--></span> </a>
       <p class="footer-tagline" mt-3\_>Uzticama automašīnas apdrošināšana Latvijā ar caurskatāmiem nosacījumiem un personalizētu pieeju.</p>
-      <p class="footer-contact" mt-3\_><a href="tel:{telephone}" class="footer-link">{telephone}</a>
+      <p class="footer-contact" mt-3\_><a href="tel:+371 6 2275826" class="footer-link">+371 6 2275826</a>
        <br>
        <a href="mailto:&lt;?php" echo support_email; ?>\" class=\"footer-link\"&gt;<!--?php echo SUPPORT_EMAIL; ?--></a></p>
-      <address class="footer-address" mt-2\_>{address}</address>
+      <address class="footer-address" mt-2\_>Z-Towers, Ķīpsalas iela 8, Floor 10, Office 406, LV-1048 Rīga</address>
      </div>
      <div class="col-6" col-md-2\_>
       <h3 class="footer-heading">Pakalpojumi</h3>
@@ -561,6 +543,20 @@
     </div>
    </div>
   </footer>
-  <script src="script.js" defer></script>
- </body>
+  
+   
+  
+
+<script type="application/ld+json">    {        \"@context\": \"https://schema.org\",        \"@type\": \"Organization\",        \"name\": \"<?php echo BRAND_NAME; ?>\",        \"url\": \"<?php echo $canonical_url; ?>\",        \"logo\": \"https://domain.com/assets/img/logo.png\",        \"email\": \"<?php echo SUPPORT_EMAIL; ?>\",        \"telephone\": \"+371 6 2275826\",        \"address\": {            \"@type\": \"PostalAddress\",            \"streetAddress\": \"Z-Towers, Ķīpsalas iela 8, Floor 10, Office 406, LV-1048 Rīga\",            \"addressCountry\": \"LV\"        },        \"sameAs\": []    }    </script>
+<script type="application/ld+json">    {        \"@context\": \"https://schema.org\",        \"@type\": \"WebSite\",        \"name\": \"<?php echo BRAND_NAME; ?>\",        \"url\": \"<?php echo $canonical_url; ?>\",        \"potentialAction\": {            \"@type\": \"SearchAction\",            \"target\": \"https://domain.com/?s={search_term_string}\",            \"query-input\": \"required name=search_term_string\"        }    }    </script>
+<script src="script.js" defer></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
+</body>
 </html>

@@ -485,8 +485,8 @@
     var valid = true;
     var firstError = null;
 
-    var emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/;
-    var phoneRegex = /^[-ds+()[]]{7,20}$/;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var phoneRegex = /^[-\ds+()[\]]{7,20}$/;
 
     var fields = form.querySelectorAll('input, textarea, select');
 
@@ -708,108 +708,3 @@
 
               setTimeout(onFinally, 8000);
             })();
-        });
-      })(forms[i]);
-    }
-  }
-
-  function initImages() {
-    if (__app.imagesInit) return;
-    __app.imagesInit = true;
-
-    var images = document.querySelectorAll('img');
-
-    var fallbackSVG = [
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">',
-      '<rect width="200" height="150" fill="#e9ecef"/>',
-      '<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"',
-      ' font-family="sans-serif" font-size="14" fill="#adb5bd">Image</text>',
-      '</svg>'
-    ].join('');
-
-    var fallbackSrc = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(fallbackSVG);
-
-    for (var i = 0; i < images.length; i++) {
-      (function (img) {
-        var isCritical = img.classList.contains('c-logo__img') || img.hasAttribute('data-critical');
-
-        if (!isCritical && !img.getAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
-        }
-
-        if (!img.classList.contains('img-fluid')) {
-          img.classList.add('img-fluid');
-        }
-
-        img.addEventListener('error', function onErr() {
-          img.removeEventListener('error', onErr);
-          img.src = fallbackSrc;
-        });
-      })(images[i]);
-    }
-  }
-
-  function initRipple() {
-    if (__app.rippleInit) return;
-    __app.rippleInit = true;
-
-    var selector = '.c-button, .btn-primary, .btn-outline-secondary';
-    var elements = document.querySelectorAll(selector);
-
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('click', function (e) {
-        var el = this;
-        var ripple = document.createElement('span');
-        ripple.className = 'c-ripple';
-        el.appendChild(ripple);
-        setTimeout(function () {
-          if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
-        }, 600);
-      });
-    }
-  }
-
-  function initOnlineStatus() {
-    if (__app.onlineInit) return;
-    __app.onlineInit = true;
-
-    global.addEventListener('offline', function () {
-      if (__app.notify) {
-        __app.notify('Connection error, please try again later.', 'danger');
-      }
-    });
-  }
-
-  function initFetchWithFallback() {
-    if (!global.fetch) {
-      global.fetch = function () {
-        return Promise.reject(new Error('fetch not supported'));
-      };
-    }
-  }
-
-  __app.init = function () {
-    if (__app.initialized) return;
-    __app.initialized = true;
-
-    initNotify();
-    initBurger();
-    initAnchors();
-    initActiveNav();
-    initScrollSpy();
-    initScrollToTop();
-    initCountUp();
-    initModal();
-    initForms();
-    initImages();
-    initRipple();
-    initOnlineStatus();
-    initFetchWithFallback();
-  };
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', __app.init);
-  } else {
-    __app.init();
-  }
-})(window);

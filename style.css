@@ -976,7 +976,6 @@ blockquote {
 .c-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
   background: linear-gradient(160deg, var(--color-surface) 0%, rgba(253,242,246,0.5) 100%);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-lg);
